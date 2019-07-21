@@ -1,0 +1,72 @@
+@import 'nav';
+@import 'scroll';
+
+$font-serif: 'Literata',
+serif;
+$font-main: 'Roboto',
+sans-serif;
+
+body {
+    font-family: $font-main;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2em;
+    align-items: flex-start;
+
+    article {
+        width: 28%;
+        margin: 1em 2%;
+
+        header {
+            margin: 0.5em 1em;
+            font-family: $font-serif;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            margin: 0.5em 1em;
+            color: grey;
+        }
+
+        .writer {
+            margin: 0.5em 1em;
+            color: #454545;
+        }
+
+        .meta {
+            margin: 0.5em 1em;
+            color: grey;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    main {
+        article {
+            width: 100%;
+            margin: 1em 2%;
+        }
+    }
+
+    .nav-head-menu {
+        visibility: hidden;
+    }
+
+    .nav-head-title {
+        visibility: hidden;
+    }
+
+    .nav-head-title-mobile {
+        visibility: visible !important;
+    }
+}
